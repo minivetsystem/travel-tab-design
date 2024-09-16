@@ -1,0 +1,155 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <title>Booking Area</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+ 
+<body>
+ 
+<div class="tabBox">
+  <ul class="tabs">
+    <li><a href="#tab1">Book</a></li>
+    <li><a href="#tab2">Flight status</a></li>
+    <li><a href="#tab3">Check-in</a></li>
+    <li><a href="#tab4">My trips</a></li>
+  </ul>
+ 
+  <div class="tabContainer">
+    <div id="tab1" class="tabContent innertab">
+		  <ul>
+			<li class="active-tab"><a href="#">Flight</a></li>
+			<li><a href="#">Packages</a></li>
+			<li><a href="#">Hotel</a></li>
+			<li><a href="#">Car</a></li>
+			<li><a href="#">Cruise <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+		  </ul>
+		  <div class="form-sec">	
+			<form>
+			  <div class="form-group">
+				<div class="row">
+					<div class="col-md-2">
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Roundtrip
+						</label>
+					</div>
+					<div class="col-md-2">
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> One-way
+						</label>
+					</div>
+					<div class="col-md-3">
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox1" value="option1"> Book with miles
+						</label>
+					</div>
+					<div class="col-md-3">
+						<label class="checkbox-inline">
+						  <input type="checkbox" id="inlineCheckbox2" value="option2"> Flexible dates
+						</label>
+					</div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-5">
+				  <div class="form-group">
+					<label>From</label>
+					<input type="text" class="form-control" placeholder="Source">
+				  </div>
+				</div>
+				<div class="col-md-1">
+					<span class="exchange-arrow"><i class="fa fa-exchange" aria-hidden="true"></i></span>
+				</div>
+				<div class="col-md-5">
+				  <div class="form-group">
+					<label>To</label>
+					<input type="text" class="form-control" placeholder="Destination">
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-5">
+				  <div class="form-group">
+					<label>Dates</label>
+					<input type="date" class="form-control" placeholder="Email">
+				  </div>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-5">
+				  <div class="form-group">
+					<label>Travelers</label>
+					<input type="text" class="form-control" placeholder="1 Adult">
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-5">
+				  <div class="form-group">
+					<label></label>
+					<select class="form-control">
+					  <option>Economy</option>
+					  <option>Business</option>
+					</select>
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-md-5">
+				  <div class="advance-search">
+					<p><a href="#" class="search-link">Advance search <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+					<p>(Certifications, multi-city and upgreades)</p>
+					<p><a href="#">Changed bag rulles</a> and <br> <a href="#">fees for optional services</a></p>
+				  </div>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-5">
+					<div class="button-sec">
+						<button type="submit" class="btn1">Find flights</button>
+						<button type="submit" class="btn2"><i class="fa fa-folder-open-o" aria-hidden="true"></i> Find your travel credits</button>
+					</div>
+				</div>
+			  </div>
+			</form>
+		  </div>
+    </div>
+     
+    <div id="tab2" class="tabContent">
+      This would be the archives...
+    </div>
+ 
+    <div id="tab3" class="tabContent">
+      This would be the tags...
+    </div> 
+    
+    <div id="tab4" class="tabContent">
+      This would be the comments...
+    </div>    
+     
+  </div>
+</div> 
+ 
+<script type="text/javascript">
+  $(".tabContent").hide(); 
+  $("ul.tabs li:first").addClass("active").show(); 
+  $(".tabContent:first").show(); 
+ 
+  $("ul.tabs li").click(function () {
+    $("ul.tabs li").removeClass("active"); 
+    $(this).addClass("active"); 
+    $(".tabContent").hide(); 
+    var activeTab = $(this).find("a").attr("href"); 
+    $(activeTab).fadeIn(); 
+    return false;
+  });
+</script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
